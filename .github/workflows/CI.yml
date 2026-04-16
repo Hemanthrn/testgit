@@ -2,8 +2,7 @@ name: CI
    
 # Controls when the workflow will run  
 on:  
-  # Triggers the workflow on push or pull request events but only for the 
-"main" branch  
+  # Triggers the workflow on push or pull request events but only for the "main" branch  
   push:  
     branches: [ "main" ]  
   pull_request:  
@@ -24,10 +23,12 @@ jobs:
     needs: [lint, test]  
     steps:  
       - uses: actions/checkout@v2 
-- run: echo "Hello world" 
-test1: 
-strategy: 
-matrix: 
-os: [ubuntu-latest, windows-latest, macos-latest] 
-runs-on: $ 
-steps: - uses: actions/checkout@v2 - run: echo "hello Test"
+      - run: echo "Hello world" 
+  test1: 
+   strategy: 
+    matrix: 
+     os: [ubuntu-latest, windows-latest, macos-latest] 
+   runs-on: $ 
+   steps:
+     - uses: actions/checkout@v2
+     - run: echo "hello Test"
