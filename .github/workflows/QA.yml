@@ -8,7 +8,7 @@ on:
 jobs:  
   Logintodockerhub:  
     runs-on: ubuntu-latest  
-    environment: Dev  
+    environment: dev  
     steps:  
         - uses: actions/checkout@v3  
         - name: docker login  
@@ -22,7 +22,7 @@ jobs:
     
   Logintodockerhubqa:  
     runs-on: ubuntu-latest  
-    environment: Qa  
+    environment: QA  
     steps:  
         - uses: actions/checkout@v3  
         - name: docker login  
